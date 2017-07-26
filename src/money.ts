@@ -8,6 +8,6 @@ export class Dollar {
         return new Dollar(this.amount * multiplier);
     }
     equals(dollar: Dollar): boolean {
-        return true;
+        return this.amount === dollar.amount;
     }
 }
