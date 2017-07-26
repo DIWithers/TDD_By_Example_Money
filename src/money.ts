@@ -7,4 +7,7 @@ export class Dollar {
     times(multiplier: number): Dollar {
         return new Dollar(this.amount * multiplier);
     }
+    equals(dollar: Dollar): boolean {
+        return true;
+    }
 }

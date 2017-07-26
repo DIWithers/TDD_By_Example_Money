@@ -11,4 +11,8 @@ describe("Money Example", () => {
 
     });
 
+    it("should test equality", () => {
+        expect(new Dollar(5).equals(new Dollar(5))).toBeTruthy();
+    });
+
 });
