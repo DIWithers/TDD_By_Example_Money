@@ -2,12 +2,12 @@ export class Money {
     protected amount: number;
 
     equals(money: Money): boolean {
-        return this.amount === money.amount;
+        return this.amount === money.amount && this.constructor === money.constructor;
     }
 
 }
 
-export class Dollar extends Money{
+export class Dollar extends Money {
     constructor(amount: number) {
         this.amount = amount;
     }
@@ -17,7 +17,7 @@ export class Dollar extends Money{
     }
 }
 
-export class Franc extends Money{
+export class Franc extends Money {
     constructor(amount: number) {
         this.amount = amount;
     }
