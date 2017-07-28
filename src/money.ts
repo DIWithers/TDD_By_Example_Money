@@ -15,24 +15,40 @@ export  abstract class Money {
 
     abstract times(multiplier: number): Money;
 
+    abstract getCurrency(): string;
+
 }
 
 export class Dollar extends Money {
+    private currency: string;
+
     constructor(amount: number) {
         this.amount = amount;
+        this.currency = "USD";
     }
 
     times(multiplier: number): Money {
         return new Dollar(this.amount * multiplier);
     }
+
+    getCurrency(): string {
+        return this.currency;
+    }
 }
 
 export class Franc extends Money {
+    private currency: string;
+
     constructor(amount: number) {
         this.amount = amount;
+        this.currency = "CHF";
     }
 
     times(multiplier: number): Money {
         return new Franc(this.amount * multiplier);
+    }
+
+    getCurrency(): string {
+        return this.currency;
     }
 }

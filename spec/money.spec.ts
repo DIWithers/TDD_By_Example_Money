@@ -23,4 +23,9 @@ describe("Money Example", () => {
         expect(five.times(3)).toEqual(new Franc(15));
     });
 
+    it("should test currency", () => {
+        expect(Money.dollar(1).getCurrency()).toBe("USD");
+        expect(Money.franc(1).getCurrency()).toBe("CHF");
+    })
+
 });
