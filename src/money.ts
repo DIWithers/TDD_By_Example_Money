@@ -23,6 +23,7 @@ export class Dollar extends Money {
     private currency: string;
 
     constructor(amount: number) {
+        super();
         this.amount = amount;
         this.currency = "USD";
     }
@@ -40,6 +41,7 @@ export class Franc extends Money {
     private currency: string;
 
     constructor(amount: number) {
+        super();
         this.amount = amount;
         this.currency = "CHF";
     }
