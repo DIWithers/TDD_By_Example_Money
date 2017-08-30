@@ -4,8 +4,8 @@ import {Franc} from "../src/money";
 describe("Money Example", () => {
     it("should test multiplication", () => {
         let five: Money = Money.dollar(5);
-        expect(five.times(2)).toEqual(Money.dollar(10));
-        expect(five.times(3)).toEqual(Money.dollar(15));
+        expect(five.times(2).equals(Money.dollar(10))).toBeTruthy();
+        expect(five.times(3).equals(Money.dollar(15))).toBeTruthy();
 
     });
 
@@ -19,8 +19,8 @@ describe("Money Example", () => {
 
     it("should test franc multiplication", () => {
         let five: Money = Money.franc(5);
-        expect(five.times(2)).toEqual(Money.franc(10));
-        expect(five.times(3)).toEqual(Money.franc(15));
+        expect(five.times(2).equals(Money.franc(10))).toBeTruthy();
+        expect(five.times(3).equals(Money.franc(15))).toBeTruthy();
     });
 
     it("should test currency", () => {
